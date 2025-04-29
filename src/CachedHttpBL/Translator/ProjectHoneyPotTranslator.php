@@ -29,7 +29,7 @@ class ProjectHoneyPotTranslator implements Translator
 
     public function getActivityDescription(): string
     {
-        return sprintf('last seen %d day(s) ago', $this->response->getActivity());
+        return \sprintf('last seen %d day(s) ago', $this->response->getActivity());
     }
 
     public function getThreatDescription(): string
