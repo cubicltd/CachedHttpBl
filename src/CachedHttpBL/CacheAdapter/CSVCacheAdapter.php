@@ -108,7 +108,7 @@ class CSVCacheAdapter implements CacheAdapter
 
             if ($responseData[1] >= $cacheLifetimeTimestamp) { // do not load outdated data
                 $this->addResponse(new ProjectHoneyPotResponse(
-                    (string)long2ip((int)$responseData[0]),
+                    long2ip((int)$responseData[0]),
                     (int) trim($responseData[1]),
                     empty($responseData[2]) ? -1 : (int)$responseData[2],
                     empty($responseData[2]) ? -1 : (int)$responseData[3],
